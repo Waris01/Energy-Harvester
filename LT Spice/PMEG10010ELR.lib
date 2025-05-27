@@ -1,0 +1,61 @@
+*
+*******************************************
+*
+*PMEG10010ELR
+*
+*NXP Semiconductors
+*
+*100V, 1A low leakage current Schottky barrier rectifier
+*
+*
+*VRmax     = 100V
+*
+*IFmax(AV) = 1A 
+*VF        = 710mV @ IF = 1A
+*IR        = 40nA  @ VR = 100V
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*Package pinning does not match Spice model pinning.
+*Package: SOD123W
+*
+*Package Pin 1: Cathode 
+*Package Pin 2: Anode 
+* 
+*
+*
+*Extraction date (week/year): 18/2015
+*Simulator: SPICE3
+*
+*******************************************
+
+*The resistor R1 and the diode D2 do not reflect 
+*physical devices but improve 
+*only modeling in the reverse 
+*mode of operation.
+*
+.MODEL PMEG10010ELR D
++ IS = 1.2E-009
++ N = 1
++ BV = 117
++ IBV = 0.0155
++ RS = 0.4
++ CJO = 1.106E-010
++ VJ = 0.56
++ M = 0.47
++ FC = 0
++ TT = 0
++ EG = 0.69
++ XTI = 2
+.MODEL DIODE2 D
++ IS = 2E-012
++ N = 0.97
++ RS = 0.07
+.ENDS
+*
